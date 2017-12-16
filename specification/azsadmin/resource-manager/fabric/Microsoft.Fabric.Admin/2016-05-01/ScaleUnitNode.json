@@ -212,6 +212,61 @@
                 "x-ms-long-running-operation": true
             }
         },
+        "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnitNodes/{scaleUnitNode}/Repair": {
+            "post": {
+                "x-ms-examples": {
+                    "Repair a scale unit node": {
+                        "$ref": "./examples/ScaleUnitNode/ScaleUnitNodeRepairOperation_example.json"
+                    }
+                },
+                "tags": [
+                    "ScaleUnitNodes"
+                ],
+                "description": "Repair a scale unit node.",
+                "operationId": "ScaleUnitNodes_Repair",
+                "parameters": [
+                    {
+                        "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
+                    },
+                    {
+                        "$ref": "Fabric.json#/parameters/LocationParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/ScaleUnitNodeParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/BmcIPv4AddressParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/RepairScaleUnitNodeParameters"
+                    },
+                    {
+                        "$ref": "Fabric.json#/parameters/ApiVersionParameter"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "Operations.json#/definitions/OperationStatus"
+                        }
+                    },
+                    "202": {
+                        "description": "ACCEPTED",
+                        "schema": {
+                            "$ref": "Operations.json#/definitions/OperationStatus"
+                        }
+                    },
+                    "500": {
+                        "description": "FAILURE",
+                        "schema": {
+                            "$ref": "Operations.json#/definitions/OperationStatus"
+                        }
+                    }
+                },
+                "x-ms-long-running-operation": true
+            }
+        },
         "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnitNodes/{scaleUnitNode}": {
             "get": {
                 "x-ms-examples": {
@@ -395,6 +450,43 @@
                     "type": "string"
                 }
             }
+        },
+        "RepairScaleUnitNodeParameters": {
+            "description": "Input data that allows for repairing a scale unit node.",
+            "type": "object",
+            "properties": {
+                "bmcIPv4Address": {
+                    "description": "Bmc address of the physical machine.",
+                    "type": "string"
+                }
+            }
+        },
+        "AddScaleUnitNodeParameters": {
+            "description": "Input data that allows for adding a scale unit node.",
+            "type": "object",
+            "properties": {
+                "bmcIPv4Address": {
+                    "description": "Bmc address of the physical machine.",
+                    "type": "string"
+                },
+                "computerName": {
+                    "description": "Computer name of the physical machine.",
+                    "type": "string"
+                }
+            }
+        },
+        "AddScaleUnitNodeParametersList": {
+            "description": "A list of input data that allows for adding a set of scale unit nodes.",
+            "type": "object",
+            "properties": {
+                "nodes": {
+                    "description": "The list of nodes.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AddScaleUnitNodeParameters"
+                    }
+                }
+            }
         }
     },
     "parameters": {
@@ -405,7 +497,32 @@
             "required": true,
             "type": "string",
             "x-ms-parameter-location": "method"
+        },
+        "BmcIPv4AddressParameter": {
+            "name": "bmcIPv4Address",
+            "description": "BMC IPv4 address of the scale unit node.",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-parameter-location": "method"
+        },
+        "RepairScaleUnitNodeParametersInBody": {
+            "name": "bmcIPv4Address",
+            "description": "The BMC IPv4 address of a repaired scale unit node.",
+            "in": "body",
+            "required": true,
+            "$ref": "#/definitions/RepairScaleUnitNodeParameters"
+            "x-ms-parameter-location": "method"
+        },
+        "AddScaleUnitNodeParametersListInBody": {
+            "name": "nodeList",
+            "description": "A list of input data that allows for adding a set of scale unit nodes.",
+            "in": "body",
+            "required": true,
+            "$ref": "#/definitions/AddScaleUnitNodeParametersList"
+            "x-ms-parameter-location": "method"
         }
+
     },
     "securityDefinitions": {
         "azure_auth": {
