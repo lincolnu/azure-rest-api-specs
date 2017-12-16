@@ -238,7 +238,7 @@
                         "$ref": "#/parameters/BmcIPv4AddressParameter"
                     },
                     {
-                        "$ref": "#/parameters/RepairScaleUnitNodeParameters"
+                        "$ref": "#/parameters/RepairScaleUnitNodeParametersInBody"
                     },
                     {
                         "$ref": "Fabric.json#/parameters/ApiVersionParameter"
@@ -451,16 +451,6 @@
                 }
             }
         },
-        "RepairScaleUnitNodeParameters": {
-            "description": "Input data that allows for repairing a scale unit node.",
-            "type": "object",
-            "properties": {
-                "bmcIPv4Address": {
-                    "description": "Bmc address of the physical machine.",
-                    "type": "string"
-                }
-            }
-        },
         "AddScaleUnitNodeParameters": {
             "description": "Input data that allows for adding a scale unit node.",
             "type": "object",
@@ -486,7 +476,12 @@
                         "$ref": "#/definitions/AddScaleUnitNodeParameters"
                     }
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "type": "object"
+                }
+            ]
         }
     },
     "parameters": {
@@ -512,7 +507,7 @@
             "in": "body",
             "required": true,
             "schema": {
-                "$ref": "#/definitions/RepairScaleUnitNodeParameters",
+                "type": "string"
             },
             "x-ms-parameter-location": "method"
         },
