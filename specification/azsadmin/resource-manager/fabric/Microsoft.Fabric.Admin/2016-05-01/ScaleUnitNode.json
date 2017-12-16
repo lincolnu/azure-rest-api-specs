@@ -511,7 +511,7 @@
             "description": "The BMC IPv4 address of a repaired scale unit node.",
             "in": "body",
             "required": true,
-            "$ref": "#/definitions/RepairScaleUnitNodeParameters",
+            "type": "string",
             "x-ms-parameter-location": "method"
         },
         "AddScaleUnitNodeParametersListInBody": {
@@ -519,7 +519,7 @@
             "description": "A list of input data that allows for adding a set of scale unit nodes.",
             "in": "body",
             "required": true,
-            "$ref": "#/definitions/AddScaleUnitNodeParametersList",
+            "type": "string",
             "x-ms-parameter-location": "method"
         }
 
