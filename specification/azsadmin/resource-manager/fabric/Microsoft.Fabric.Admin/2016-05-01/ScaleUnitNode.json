@@ -298,6 +298,50 @@
                         }
                     }
                 }
+            },
+            "put": {
+                "x-ms-examples": {
+                    "Create a scale unit node": {
+                        "$ref": "./examples/ScaleUnitNode/ScaleUnitNodeCreateOperation_example.json"
+                    }
+                },
+                "tags": [
+                    "ScaleUnitNodes"
+                ],
+                "description": "Create a scale unit node.",
+                "operationId": "ScaleUnitNodes_Create",
+                "parameters": [
+                    {
+                        "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
+                    },
+                    {
+                        "$ref": "Fabric.json#/parameters/LocationParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/ScaleUnitNodeNameParameter"
+                    },
+                    {
+                        "$ref": "Fabric.json#/parameters/ApiVersionParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/AddScaleUnitNodeParametersInBody"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "Operations.json#/definitions/OperationStatus"
+                        }
+                    },
+                    "202": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "Operations.json#/definitions/OperationStatus"
+                        }
+                    }
+                },
+                "x-ms-long-running-operation": true
             }
         },
         "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnitNodes": {
@@ -448,6 +492,14 @@
                 }
             }
         },
+        "ScaleUnitNodeNameParameter": {
+            "name": "nodeName",
+            "description": "Scale unit node name.",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "x-ms-parameter-location": "method"
+        },
         "AddScaleUnitNodeParameters": {
             "description": "Input data that allows for adding a scale unit node.",
             "type": "object",
@@ -456,29 +508,11 @@
                     "description": "Bmc address of the physical machine.",
                     "type": "string"
                 },
-                "computerName": {
-                    "description": "Computer name of the physical machine.",
+                "scaleUnitName": {
+                    "description": "Scale unit name that this node will belong to.",
                     "type": "string"
                 }
             }
-        },
-        "AddScaleUnitNodeParametersList": {
-            "description": "A list of input data that allows for adding a set of scale unit nodes.",
-            "type": "object",
-            "properties": {
-                "nodes": {
-                    "description": "The list of nodes.",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/AddScaleUnitNodeParameters"
-                    }
-                }
-            },
-            "allOf": [
-                {
-                    "type": "object"
-                }
-            ]
         }
     },
     "parameters": {
@@ -500,17 +534,16 @@
             },
             "x-ms-parameter-location": "method"
         },
-        "AddScaleUnitNodeParametersListInBody": {
-            "name": "nodeList",
-            "description": "A list of input data that allows for adding a set of scale unit nodes.",
+        "AddScaleUnitNodeParametersInBody": {
+            "name": "node",
+            "description": "Input data that allows for adding a scale unit node.",
             "in": "body",
             "required": true,
             "schema": {
-                "$ref": "#/definitions/AddScaleUnitNodeParametersList",
+                "$ref": "#/definitions/AddScaleUnitNodeParameters",
             },
             "x-ms-parameter-location": "method"
         }
-
     },
     "securityDefinitions": {
         "azure_auth": {
