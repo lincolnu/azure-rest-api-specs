@@ -235,9 +235,6 @@
                         "$ref": "#/parameters/ScaleUnitNodeParameter"
                     },
                     {
-                        "$ref": "#/parameters/BmcIPv4AddressParameter"
-                    },
-                    {
                         "$ref": "#/parameters/RepairScaleUnitNodeParametersInBody"
                     },
                     {
@@ -488,14 +485,6 @@
         "ScaleUnitNodeParameter": {
             "name": "scaleUnitNode",
             "description": "Name of the scale unit node.",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "x-ms-parameter-location": "method"
-        },
-        "BmcIPv4AddressParameter": {
-            "name": "bmcIPv4Address",
-            "description": "BMC IPv4 address of the scale unit node.",
             "in": "path",
             "required": true,
             "type": "string",
