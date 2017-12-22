@@ -258,7 +258,7 @@
           "type": "string"
         }
       }
-    }
+    },
     "ScaleOutScaleUnitParametersList": {
       "description": "A list of input data that allows for adding a set of scale unit nodes.",
       "type": "object",
