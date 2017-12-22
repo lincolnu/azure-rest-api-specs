@@ -492,14 +492,6 @@
                 }
             }
         },
-        "ScaleUnitNodeNameParameter": {
-            "name": "nodeName",
-            "description": "Scale unit node name.",
-            "type": "string",
-            "in": "path",
-            "required": true,
-            "x-ms-parameter-location": "method"
-        },
         "AddScaleUnitNodeParameters": {
             "description": "Input data that allows for adding a scale unit node.",
             "type": "object",
@@ -532,6 +524,14 @@
             "schema": {
                 "type": "string"
             },
+            "x-ms-parameter-location": "method"
+        },
+        "ScaleUnitNodeNameParameter": {
+            "name": "nodeName",
+            "description": "Scale unit node name.",
+            "in": "path",
+            "required": true,
+            "type": "string",
             "x-ms-parameter-location": "method"
         },
         "AddScaleUnitNodeParametersInBody": {
