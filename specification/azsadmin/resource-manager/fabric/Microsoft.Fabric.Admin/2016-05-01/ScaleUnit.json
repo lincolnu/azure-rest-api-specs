@@ -52,6 +52,46 @@
         }
       },
     },
+    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits": {
+      "get": {
+        "x-ms-examples": {
+          "List all scale units": {
+            "$ref": "./examples/ScaleUnit/ScaleUnitListOperation_example.json"
+          }
+        },
+        "tags": [
+          "ScaleUnits"
+        ],
+        "description": "Get a list of all scale units at a location.",
+        "operationId": "ScaleUnits_List",
+        "parameters": [
+          {
+            "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/LocationParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/FilterParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ScaleUnitList"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-odata": "#/definitions/ScaleUnit"
+      }
+    },
     "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits/{scaleUnit}/Scale": {
       "post": {
         "x-ms-examples": {
@@ -102,46 +142,6 @@
           }
         },
         "x-ms-long-running-operation": true
-      }
-    },
-    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits": {
-      "get": {
-        "x-ms-examples": {
-          "List all scale units": {
-            "$ref": "./examples/ScaleUnit/ScaleUnitListOperation_example.json"
-          }
-        },
-        "tags": [
-          "ScaleUnits"
-        ],
-        "description": "Get a list of all scale units at a location.",
-        "operationId": "ScaleUnits_List",
-        "parameters": [
-          {
-            "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "Fabric.json#/parameters/LocationParameter"
-          },
-          {
-            "$ref": "Fabric.json#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "Fabric.json#/parameters/FilterParameter"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/ScaleUnitList"
-            }
-          }
-        },
-        "x-ms-pageable": {
-          "nextLinkName": "nextLink"
-        },
-        "x-ms-odata": "#/definitions/ScaleUnit"
       }
     }
   },
