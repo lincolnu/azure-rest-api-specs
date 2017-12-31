@@ -318,7 +318,7 @@
                         "$ref": "Fabric.json#/parameters/LocationParameter"
                     },
                     {
-                        "$ref": "#/parameters/ScaleUnitNodeNameParameter"
+                        "$ref": "#/parameters/ScaleUnitNodeParameter"
                     },
                     {
                         "$ref": "Fabric.json#/parameters/ApiVersionParameter"
@@ -534,14 +534,6 @@
             "schema": {
                 "$ref": "#/definitions/RepairScaleUnitNodeParameters"
             },
-            "x-ms-parameter-location": "method"
-        },
-        "ScaleUnitNodeNameParameter": {
-            "name": "nodeName",
-            "description": "Scale unit node name.",
-            "in": "path",
-            "required": true,
-            "type": "string",
             "x-ms-parameter-location": "method"
         },
         "AddScaleUnitNodeParametersInBody": {

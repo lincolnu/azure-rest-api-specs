@@ -51,6 +51,8 @@
           }
         }
       },
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits/{scaleUnit}/Scale": {
       "post": {
         "x-ms-examples": {
           "Scale out a scale unit": {
@@ -68,6 +70,9 @@
           },
           {
             "$ref": "Fabric.json#/parameters/LocationParameter"
+          },
+          {
+            "$ref": "#/parameters/ScaleUnitParameter"
           },
           {
             "$ref": "#/parameters/ScaleOutScaleUnitParametersInBody"
