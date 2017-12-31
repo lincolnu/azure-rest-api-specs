@@ -505,7 +505,17 @@
                     "type": "string"
                 }
             }
-        }
+        },
+        "RepairScaleUnitNodeParameters": {
+            "description": "This class contains the parameters sent for a repair operation.",
+            "type": "object",
+            "properties": {
+                "bmcIPv4Address": {
+                    "description": "Bmc address of the physical machine.",
+                    "type": "string"
+                }
+            }
+        },
     },
     "parameters": {
         "ScaleUnitNodeParameter": {
@@ -518,11 +528,11 @@
         },
         "RepairScaleUnitNodeParametersInBody": {
             "name": "bmcIPv4Address",
-            "description": "The BMC IPv4 address of a repaired scale unit node.",
+            "description": "The BMC IPv4 address parameter of a repaired scale unit node.",
             "in": "body",
             "required": true,
             "schema": {
-                "type": "string"
+                "ref": "#/definitions/RepairScaleUnitNodeParameters"
             },
             "x-ms-parameter-location": "method"
         },
