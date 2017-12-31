@@ -514,18 +514,6 @@
                     "description": "Bmc address of the physical machine.",
                     "type": "string"
                 }
-            },
-            "allOf": [
-                {
-                    "$ref": "#/definitions/NonResourceBodyParameter"
-                }
-            ]
-        },
-        "NonResourceBodyParameter": {
-            "description": "An operational parameter definition.",
-            "x-ms-azure-resource": false,
-            "type": "object",
-            "properties": {
             }
         }
     },
@@ -544,7 +532,7 @@
             "in": "body",
             "required": true,
             "schema": {
-                "ref": "#/definitions/RepairScaleUnitNodeParameters"
+                "$ref": "#/definitions/RepairScaleUnitNodeParameters"
             },
             "x-ms-parameter-location": "method"
         },
