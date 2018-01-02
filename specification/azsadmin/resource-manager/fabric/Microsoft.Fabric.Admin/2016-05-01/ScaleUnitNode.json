@@ -298,50 +298,6 @@
                         }
                     }
                 }
-            },
-            "post": {
-                "x-ms-examples": {
-                    "Create a scale unit node": {
-                        "$ref": "./examples/ScaleUnitNode/ScaleUnitNodeCreateOperation_example.json"
-                    }
-                },
-                "tags": [
-                    "ScaleUnitNodes"
-                ],
-                "description": "Create a scale unit node.",
-                "operationId": "ScaleUnitNodes_Create",
-                "parameters": [
-                    {
-                        "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
-                    },
-                    {
-                        "$ref": "Fabric.json#/parameters/LocationParameter"
-                    },
-                    {
-                        "$ref": "#/parameters/ScaleUnitNodeParameter"
-                    },
-                    {
-                        "$ref": "Fabric.json#/parameters/ApiVersionParameter"
-                    },
-                    {
-                        "$ref": "#/parameters/AddScaleUnitNodeParametersInBody"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "Operations.json#/definitions/OperationStatus"
-                        }
-                    },
-                    "202": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "Operations.json#/definitions/OperationStatus"
-                        }
-                    }
-                },
-                "x-ms-long-running-operation": true
             }
         },
         "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnitNodes": {
@@ -492,20 +448,6 @@
                 }
             }
         },
-        "AddScaleUnitNodeParameters": {
-            "description": "Input data that allows for adding a scale unit node.",
-            "type": "object",
-            "properties": {
-                "bmcIPv4Address": {
-                    "description": "Bmc address of the physical machine.",
-                    "type": "string"
-                },
-                "scaleUnitName": {
-                    "description": "Scale unit name that this node will belong to.",
-                    "type": "string"
-                }
-            }
-        },
         "RepairScaleUnitNodeParameters": {
             "description": "This class contains the parameters sent for a repair operation.",
             "type": "object",
@@ -533,16 +475,6 @@
             "required": true,
             "schema": {
                 "$ref": "#/definitions/RepairScaleUnitNodeParameters"
-            },
-            "x-ms-parameter-location": "method"
-        },
-        "AddScaleUnitNodeParametersInBody": {
-            "name": "node",
-            "description": "Input data that allows for adding a scale unit node.",
-            "in": "body",
-            "required": true,
-            "schema": {
-                "$ref": "#/definitions/AddScaleUnitNodeParameters",
             },
             "x-ms-parameter-location": "method"
         }

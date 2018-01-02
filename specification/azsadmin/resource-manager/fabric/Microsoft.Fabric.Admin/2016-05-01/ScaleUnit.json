@@ -92,7 +92,59 @@
         "x-ms-odata": "#/definitions/ScaleUnit"
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits/{scaleUnit}/Scale": {
+    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits/{scaleUnit}/Create": {
+      "post": {
+        "x-ms-examples": {
+          "Scale out a scale unit": {
+            "$ref": "./examples/ScaleUnit/ScaleUnitCreateOperation_example.json"
+          }
+        },
+        "tags": [
+          "ScaleUnits"
+        ],
+        "description": "Create a scale unit.",
+        "operationId": "ScaleUnits_Create",
+        "parameters": [
+          {
+            "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/LocationParameter"
+          },
+          {
+            "$ref": "#/parameters/ScaleUnitParameter"
+          },
+          {
+            "$ref": "#/parameters/ScaleOutScaleUnitParametersInBody"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          },
+          "202": {
+            "description": "ACCEPTED",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          },
+          "500": {
+            "description": "FAILURE",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/scaleUnits/{scaleUnit}/ScaleOut": {
       "post": {
         "x-ms-examples": {
           "Scale out a scale unit": {
