@@ -3,12 +3,14 @@
         "api-version": "2016-05-01",
         "subscriptionId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
         "location": "local",
-        "nodeName": "NODE01",
-        "node": {
-            "properties": {
-                "bmcIPv4Address": "10.10.1.1",
-                "scaleUnitName": "s-cluster"
-            }
+        "scaleUnit": "S-Cluster"
+        "nodeList": {
+            "nodes": [
+                {
+                    "bmcIPv4Address": "10.10.1.1",
+                    "computerName": "NODE01"
+                }
+            ]
         }
     },
     "responses": {
