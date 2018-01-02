@@ -299,7 +299,7 @@
                     }
                 }
             },
-            "put": {
+            "post": {
                 "x-ms-examples": {
                     "Create a scale unit node": {
                         "$ref": "./examples/ScaleUnitNode/ScaleUnitNodeCreateOperation_example.json"
