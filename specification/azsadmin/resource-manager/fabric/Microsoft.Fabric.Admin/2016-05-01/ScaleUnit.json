@@ -354,13 +354,13 @@
         },
         "InfrastructureNetwork": {
           "description": "Top level infrastructure IP network.",
-          "schema": {
+          "type": {
             "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition",
           }
         },
         "StorageNetwork": {
           "description": "Top level storage IP network.",
-          "schema": {
+          "type": {
             "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition"
           }
         },
