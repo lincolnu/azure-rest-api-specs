@@ -325,11 +325,11 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/ScaleOutScaleUnitParameters"
-          },
-          "awaitStorageConvergence" : {
-            "description": "The list of nodes.",
-            "type": "boolean",
           }
+        },
+        "awaitStorageConvergence" : {
+          "description": "The list of nodes.",
+          "type": "boolean"
         }
       }
     },
