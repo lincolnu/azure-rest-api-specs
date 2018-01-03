@@ -324,9 +324,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/ScaleOutScaleUnitParameters"
-          }
-        },
-        "x-ms-client-flatten": false
+          },
+          "x-ms-client-flatten": false
+        }
       },
       "allOf": [
         {
