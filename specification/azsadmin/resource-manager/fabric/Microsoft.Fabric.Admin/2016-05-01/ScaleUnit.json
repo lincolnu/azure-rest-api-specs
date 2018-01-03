@@ -381,12 +381,16 @@
             }
           }
         },
-        "physcialNodes": {
+        "physicalNodes": {
           "description": "The list of nodes.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/JsonScaleUnitNodeParameters"
           }
+        },
+        "NetQosPriority" : {
+          "description": "QoS policy.",
+          "type": "string"
         }
       }
     },
