@@ -325,7 +325,8 @@
           "items": {
             "$ref": "#/definitions/ScaleOutScaleUnitParameters"
           }
-        }
+        },
+        "x-ms-client-flatten": false
       },
       "allOf": [
         {
@@ -350,7 +351,8 @@
       "required": true,
       "schema": {
         "$ref": "#/definitions/ScaleOutScaleUnitParametersList",
-      }
+      },
+      "x-ms-parameter-location": "method"
     }
   },
   "securityDefinitions": {
