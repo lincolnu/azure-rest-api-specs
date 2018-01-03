@@ -353,16 +353,10 @@
           }
         },
         "InfrastructureNetwork": {
-          "description": "Top level infrastructure IP network.",
-          "type": {
-            "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition",
-          }
+          "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition",
         },
         "StorageNetwork": {
-          "description": "Top level storage IP network.",
-          "type": {
-            "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition"
-          }
+          "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition"
         },
         "physicalNodes": {
           "description": "The list of nodes.",
