@@ -318,7 +318,6 @@
     },
     "ScaleOutScaleUnitParametersList": {
       "description": "A list of input data that allows for adding a set of scale unit nodes.",
-      "type": "object",
       "properties": {
         "nodes": {
           "description": "The list of nodes.",
@@ -351,8 +350,7 @@
       "required": true,
       "schema": {
         "$ref": "#/definitions/ScaleOutScaleUnitParametersList",
-      },
-      "x-ms-parameter-location": "method"
+      }
     }
   },
   "securityDefinitions": {
