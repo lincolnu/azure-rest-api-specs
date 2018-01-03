@@ -324,8 +324,11 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/ScaleOutScaleUnitParameters"
-          },
-          "x-ms-client-flatten": false
+          }
+        },
+        "AwaitStorageConvergence": {
+          "description": "Whether the operation should await completion of storage replication",
+          "type": "boolean"
         }
       },
       "allOf": [
