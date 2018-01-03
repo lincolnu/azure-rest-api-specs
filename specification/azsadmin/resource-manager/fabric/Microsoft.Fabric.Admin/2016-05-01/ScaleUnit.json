@@ -394,20 +394,19 @@
     "CreateScaleUnitFromJsonNetworkDefinition" : {
       "description": "Input data that allows for adding a scale unit node.",
       "type": "object",
-        "properties": {
-          "Subnet": {
-            "description": "Top level storage IP subnet.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "VlanId": {
-            "description": "Top level storage IP subnet Vlan Id.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+      "properties": {
+        "Subnet": {
+          "description": "Top level storage IP subnet.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "VlanId": {
+          "description": "Top level storage IP subnet Vlan Id.",
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }
