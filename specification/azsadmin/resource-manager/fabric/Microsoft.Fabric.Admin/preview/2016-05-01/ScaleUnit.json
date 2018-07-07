@@ -361,7 +361,7 @@
           }
         },
         "InfrastructureNetwork": {
-          "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition",
+          "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition"
         },
         "StorageNetwork": {
           "$ref": "#/definitions/CreateScaleUnitFromJsonNetworkDefinition"
