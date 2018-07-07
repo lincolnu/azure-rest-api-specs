@@ -429,7 +429,7 @@
       "in": "body",
       "required": true,
       "schema": {
-        "$ref": "#/definitions/ScaleOutScaleUnitParametersList",
+        "$ref": "#/definitions/ScaleOutScaleUnitParametersList"
       },
       "x-ms-parameter-location": "method"
     },
