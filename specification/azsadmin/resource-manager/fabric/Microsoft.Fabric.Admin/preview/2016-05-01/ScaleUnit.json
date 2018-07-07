@@ -178,22 +178,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "Operations.json#/definitions/OperationStatus"
-            }
+              "description": "OK"
           },
           "202": {
-            "description": "ACCEPTED",
-            "schema": {
-              "$ref": "Operations.json#/definitions/OperationStatus"
-            }
+              "description": "ACCEPTED"
           },
           "500": {
-            "description": "FAILURE",
-            "schema": {
-              "$ref": "Operations.json#/definitions/OperationStatus"
-            }
+            "description": "FAILURE"
           }
         },
         "x-ms-long-running-operation": true
