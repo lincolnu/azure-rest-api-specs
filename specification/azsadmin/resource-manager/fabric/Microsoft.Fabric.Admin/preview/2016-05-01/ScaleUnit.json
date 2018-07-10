@@ -182,9 +182,6 @@
           },
           "202": {
               "description": "ACCEPTED"
-          },
-          "500": {
-            "description": "FAILURE"
           }
         },
         "x-ms-long-running-operation": true
