@@ -170,7 +170,7 @@
             "$ref": "#/parameters/ScaleUnitParameter"
           },
           {
-            "$ref": "#/parameters/CreateFromJsonParametersInBody"
+            "$ref": "#/parameters/CreateScaleUnitParametersInBody"
           },
           {
             "$ref": "Fabric.json#/parameters/ApiVersionParameter"
@@ -329,7 +329,7 @@
         }
       }
     },
-    "CreateFromJsonParameters": {
+    "CreateScaleUnitParameters": {
       "description": "Parameters that fully define a new cluster to be created.",
       "type": "object",
       "properties": {
@@ -421,13 +421,13 @@
       },
       "x-ms-parameter-location": "method"
     },
-    "CreateFromJsonParametersInBody": {
-      "name": "inputJson",
+    "CreateScaleUnitParametersInBody": {
+      "name": "inputScaleUnitData",
       "description": "The json content expected to describe a new cluster.",
       "in": "body",
       "required": true,
       "schema": {
-        "$ref": "#/definitions/CreateFromJsonParameters"
+        "$ref": "#/definitions/CreateScaleUnitParameters"
       },
       "x-ms-parameter-location": "method"
     }
