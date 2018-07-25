@@ -57,6 +57,16 @@
       }
     }
   },
+  "parameters": {
+    "AlertIdParameter": {
+      "name": "alertId",
+      "description": "Id of the alert.",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "x-ms-parameter-location": "method"
+    }
+  },
   "securityDefinitions": {
     "azure_auth": {
       "type": "oauth2",
