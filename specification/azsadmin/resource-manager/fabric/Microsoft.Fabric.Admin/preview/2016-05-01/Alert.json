@@ -49,6 +49,9 @@
           "202": {
             "description": "ACCEPTED"
           },
+          "500": {
+            "description": "FAILED"
+          }
         },
         "x-ms-long-running-operation": true
       }
