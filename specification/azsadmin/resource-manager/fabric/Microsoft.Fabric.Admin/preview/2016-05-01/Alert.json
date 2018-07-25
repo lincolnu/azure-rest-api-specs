@@ -20,7 +20,7 @@
       "post": {
         "x-ms-examples": {
           "Remediate an alert": {
-            "$ref": "./examples/alerts/AlertRemediateOperation_example.json"
+            "$ref": "./examples/Alert/AlertRemediateOperation_example.json"
           }
         },
         "tags": [
