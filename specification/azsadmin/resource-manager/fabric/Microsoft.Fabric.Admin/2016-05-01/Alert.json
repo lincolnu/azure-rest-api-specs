@@ -1,0 +1,87 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Alert operation endpoints and objects.",
+    "title": "FabricAdminClient",
+    "version": "2016-05-01"
+  },
+  "host": "adminmanagement.local.azurestack.external",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/Microsoft.Fabric.Admin/fabricLocations/{location}/alerts/{alertId}/remediate": {
+      "post": {
+        "x-ms-examples": {
+          "Remediate an alert": {
+            "$ref": "./examples/alerts/AlertRemediateOperation_example.json"
+          }
+        },
+        "tags": [
+          "Alerts"
+        ],
+        "description": "Remediate an alert.",
+        "operationId": "Remediate_Alert",
+        "parameters": [
+          {
+            "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/LocationParameter"
+          },
+          {
+            "$ref": "#/parameters/AlertIdParameter"
+          },
+          {
+            "$ref": "Fabric.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          },
+          "202": {
+            "description": "ACCEPTED",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          },
+          "500": {
+            "description": "FAILURE",
+            "schema": {
+              "$ref": "Operations.json#/definitions/OperationStatus"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true
+      }
+    },
+  },
+  "securityDefinitions": {
+    "azure_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "flow": "implicit",
+      "description": "Azure Active Directory OAuth2 Flow",
+      "scopes": {
+        "user_impersonation": "impersonate your user account"
+      }
+    }
+  },
+  "security": [
+    {
+      "azure_auth": [
+        "user_impersonation"
+      ]
+    }
+  ]
+}
