@@ -55,7 +55,7 @@
         },
         "x-ms-long-running-operation": true
       }
-    },
+    }
   },
   "securityDefinitions": {
     "azure_auth": {
