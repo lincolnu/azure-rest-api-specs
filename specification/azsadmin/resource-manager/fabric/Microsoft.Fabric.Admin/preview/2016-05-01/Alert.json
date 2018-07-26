@@ -27,7 +27,7 @@
           "Alerts"
         ],
         "description": "Remediate an alert.",
-        "operationId": "Remediate_Alert",
+        "operationId": "Alerts_Fix",
         "parameters": [
           {
             "$ref": "Fabric.json#/parameters/SubscriptionIdParameter"
