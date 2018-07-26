@@ -33,7 +33,6 @@ These settings apply only when `--tag=package-2016-05-01` is specified on the co
 
 ``` yaml $(tag) == 'package-2016-05-01'
 input-file:
-    - "Microsoft.Fabric.Admin/preview/2016-05-01/Alert.json"
     - "Microsoft.Fabric.Admin/preview/2016-05-01/Fabric.json"
     - "Microsoft.Fabric.Admin/preview/2016-05-01/EdgeGateway.json"
     - "Microsoft.Fabric.Admin/preview/2016-05-01/EdgeGatewayPool.json"
@@ -51,6 +50,7 @@ input-file:
     - "Microsoft.Fabric.Admin/preview/2016-05-01/ScaleUnit.json"
     - "Microsoft.Fabric.Admin/preview/2016-05-01/ScaleUnitNode.json"
     - "Microsoft.Fabric.Admin/preview/2016-05-01/SlbMuxInstance.json"
+    - "Microsoft.Fabric.Admin/preview/2016-05-01/Alert.json"
 ```
 
 ---
